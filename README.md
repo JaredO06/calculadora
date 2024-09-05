@@ -55,3 +55,5 @@ print(f"Peso: {peso:.2f} kg")
 print(f"Estatura: {estatura:.2f} m")
 print(f"Índice de Masa Corporal (IMC): {imc:.2f}")
 
+ El bootcam hasta el momento me ah dejado enseñanzas como la disciplina que debe tener un programado y el entusiasmo para crear cosas y escribir codigo 
+es muy interesante ver como cada vez se aprenden cosas nuevas 
