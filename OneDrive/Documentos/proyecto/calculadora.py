@@ -32,12 +32,3 @@ print(f"Peso: {peso:.2f} kg")
 print(f"Estatura: {estatura:.2f} m")
 print(f"Índice de Masa Corporal (IMC): {imc:.2f}")
 
-# Interpretar el resultado del IMC
-if imc < 18.5:
-    print("Interpretación: Bajo peso.")
-elif 18.5 <= imc < 24.9:
-    print("Interpretación: Peso normal.")
-elif 25 <= imc < 29.9:
-    print("Interpretación: Sobrepeso.")
-else:
-    print("Interpretación: Obesidad.")
