@@ -1,61 +1,47 @@
-# Proyecto: Calculadora de IMC 
+Descripción del Proyecto
+Este proyecto incluye dos programas sencillos que hemos desarrollado como parte del aprendizaje en Python durante el bootcamp.
 
-Este proyecto es una  "calculadora de Índice de Masa Corporal (IMC)". El programa solicita al usuario su información personal, como el nombre, apellido, edad, peso y estatura, valida que estos datos sean correctos, y luego calcula su IMC. Finalmente, muestra los resultados de manera clara y estructurada.
+Programa 1: Longitud de una Palabra
+El primer programa toma una palabra ingresada por el usuario y evalúa su longitud. Según la cantidad de letras de la palabra, el programa da un mensaje indicando si es correcta (tiene entre 4 y 8 letras), si le faltan letras o si le sobran.
 
-# Características del Código
-
-# 1. **Validación de Texto**
-Para evitar que los campos importantes queden vacíos, el código incluye la función `validar_texto()`. Esta función garantiza que el usuario no pueda ingresar una cadena vacía:
-
-def validar_texto(texto):
-    while not texto.strip():
-        texto = input("Este campo no puede quedar vacío. Por favor, ingresa nuevamente: ")
-    return texto
-
- *Explicación: La función usa un bucle `while` para asegurarse de que la entrada del usuario contenga algún valor y no se limiten a espacios en blanco.
-
-#2. *Validación de Números*
-El código también incluye una función llamada `validar_numero()`, que se asegura de que el usuario introduzca un valor numérico válido (ya sea un número entero o un decimal):
-
-def validar_numero(mensaje):
-    while True:
-        try:
-            valor = float(input(mensaje))
-            return valor
-        except ValueError:
-            print("Por favor, introduce un número válido.")
-
-*Explicación: Esta función usa un `try-except` para manejar el caso donde el usuario ingrese algo que no es un número. Si se genera una excepción `ValueError`, se solicita nuevamente una entrada hasta que sea válida.
-
-#3. *Solicitar Información al Usuario*
-El programa utiliza las funciones de validación para solicitar al usuario su nombre, apellidos, edad, peso y estatura. Esto asegura que todos los datos ingresados sean correctos antes de proceder al cálculo:
-
-nombre = validar_texto(input("Ingresa tu nombre: "))
-apellido_paterno = validar_texto(input("Ingresa tu apellido paterno: "))
-apellido_materno = validar_texto(input("Ingresa tu apellido materno: "))
-edad = validar_numero("Ingresa tu edad: ")
-peso = validar_numero("Ingresa tu peso en kilogramos: ")
-estatura = validar_numero("Ingresa tu estatura en metros: ")
+Programa 2: Cuadrante de un Punto
+El segundo programa toma las coordenadas X e Y de un punto en el plano cartesiano, y determina en qué cuadrante se encuentra el punto. Además, el programa verifica si el punto está sobre los ejes o en el origen (0,0), y en esos casos da mensajes específicos.
 
 
-#4. *Cálculo del IMC*
-Con los datos ingresados, el programa calcula el IMC usando la fórmula:
+README - Programa para Identificar la Longitud de una Palabra y el Cuadrante de un Punto
+Descripción del Proyecto
+Este proyecto incluye dos programas sencillos que hemos desarrollado como parte del aprendizaje en Python durante el bootcamp.
 
-imc = peso / (estatura ** 2)
+Programa 1: Longitud de una Palabra
+El primer programa toma una palabra ingresada por el usuario y evalúa su longitud. Según la cantidad de letras de la palabra, el programa da un mensaje indicando si es correcta (tiene entre 4 y 8 letras), si le faltan letras o si le sobran.
 
-*Fórmula*: El IMC se calcula dividiendo el peso (en kilogramos) por el cuadrado de la estatura (en metros).
+Programa 2: Cuadrante de un Punto
+El segundo programa toma las coordenadas X e Y de un punto en el plano cartesiano, y determina en qué cuadrante se encuentra el punto. Además, el programa verifica si el punto está sobre los ejes o en el origen (0,0), y en esos casos da mensajes específicos.
 
-#5. *Despliegue de Resultados*
-Finalmente, el programa imprime todos los datos del usuario junto con el IMC calculado:
+Programas
+Programa 1: Longitud de una Palabra
+Este programa se encarga de evaluar la longitud de una palabra dada por el usuario. El flujo del programa es simple:
 
-print("\n--- Datos del Usuario ---")
-print(f"Nombre Completo: {nombre} {apellido_paterno} {apellido_materno}")
-print(f"Edad: {edad} años")
-print(f"Peso: {peso:.2f} kg")
-print(f"Estatura: {estatura:.2f} m")
-print(f"Índice de Masa Corporal (IMC): {imc:.2f}")
+Se pide una palabra al usuario.
+Se obtiene la longitud de la palabra usando la función len().
+Se compara la longitud con el rango deseado (4-8 letras).
+Dependiendo de la longitud, se imprime uno de los siguientes mensajes:
+Palabra correcta si la longitud es entre 4 y 8 letras.
+Hacen falta letras si tiene menos de 4.
+Sobran letras si tiene más de 8.
 
+Programa 2: Cuadrante de un Punto
+Este programa utiliza las coordenadas X e Y para determinar en qué cuadrante se encuentra un punto en el plano cartesiano. El programa sigue estos pasos:
 
+Se ingresan las coordenadas X e Y.
+Se verifica si el punto está en el origen o sobre uno de los ejes.
+Si no está en el origen ni sobre los ejes, se determina en qué cuadrante está el punto:
+Cuadrante I: X > 0, Y > 0
+Cuadrante II: X < 0, Y > 0
+Cuadrante III: X < 0, Y < 0
+Cuadrante IV: X > 0, Y < 0
 
- El bootcam hasta el momento me ah dejado enseñanzas como la disciplina que debe tener un programado y el entusiasmo para crear cosas y escribir codigo 
-es muy interesante ver como cada vez se aprenden cosas nuevas 
+Reflexiones del Bootcamp
+Hasta ahora, el bootcamp nos ha permitido aprender lo básico de la programación en Python, y estos dos ejercicios representan el tipo de problemas que podemos resolver con lo que hemos aprendido. Algunas reflexiones sobre nuestra experiencia:
+
+Pensamiento lógico: La programación nos ha enseñado a estructurar y organizar nuestras ideas. Crear programas implica pensar en los pasos a seguir para resolver un problema de manera lógica y secuencial.
