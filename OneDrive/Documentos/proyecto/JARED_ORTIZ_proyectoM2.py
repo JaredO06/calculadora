@@ -1,4 +1,4 @@
-# Programa para verificar la longitud de una palabra
+*Programa para verificar la longitud de una palabra*
 palabra = input("Ingresa una palabra: ")
 
 # Calculamos la longitud de la palabra
@@ -19,7 +19,7 @@ else:
 
 
 
-# Programa para identificar el cuadrante de un punto
+*Programa para identificar el cuadrante de un punto*
 x = float(input("Ingresa la coordenada X: "))
 y = float(input("Ingresa la coordenada Y: "))
 
