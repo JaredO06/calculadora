@@ -9,6 +9,7 @@ esta simulación:3,000 canicas caen a través de 12 niveles.
 Cada canica tiene una probabilidad del 50% de desviarse hacia la izquierda o hacia la derecha en cada nivel.
 Al final, un histograma muestra la cantidad de canicas en cada contenedor, representando la distribución final de las posiciones.
 Estructura del Código
+
 El programa está dividido en dos funciones principales:
 
 Función simular_galton:
