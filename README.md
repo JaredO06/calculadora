@@ -1,47 +1,31 @@
+Simulación de una Máquina de Galton
+Este proyecto simula una máquina de Galton en Python, generando una distribución de las posiciones finales de canicas que caen a través de una serie de obstáculos. La simulación muestra cómo las canicas se acumulan en diferentes contenedores, siguiendo una distribución binomial que se aproxima a una campana de Gauss.
+
 Descripción del Proyecto
-Este proyecto incluye dos programas sencillos que hemos desarrollado como parte del aprendizaje en Python durante el bootcamp.
+La máquina de Galton es un dispositivo que permite observar cómo las canicas, al caer a través de una serie de niveles de obstáculos, se distribuyen de forma aproximada en una curva de campana. En esta simulación:
 
-Programa 1: Longitud de una Palabra
-El primer programa toma una palabra ingresada por el usuario y evalúa su longitud. Según la cantidad de letras de la palabra, el programa da un mensaje indicando si es correcta (tiene entre 4 y 8 letras), si le faltan letras o si le sobran.
+3,000 canicas caen a través de 12 niveles.
+Cada canica tiene una probabilidad del 50% de desviarse hacia la izquierda o hacia la derecha en cada nivel.
+Al final, un histograma muestra la cantidad de canicas en cada contenedor, representando la distribución final de las posiciones.
+Estructura del Código
+El programa está dividido en dos funciones principales:
 
-Programa 2: Cuadrante de un Punto
-El segundo programa toma las coordenadas X e Y de un punto en el plano cartesiano, y determina en qué cuadrante se encuentra el punto. Además, el programa verifica si el punto está sobre los ejes o en el origen (0,0), y en esos casos da mensajes específicos.
+Función simular_galton:
 
+Propósito: Simula la caída de las canicas a través de la máquina de Galton.
+Parámetros:
+num_canicas: Número total de canicas que caen (en este caso, 3000).
+num_niveles: Número de niveles de obstáculos (en este caso, 12).
+Proceso:
+Para cada canica, la función genera una serie de decisiones aleatorias (izquierda o derecha) en cada nivel.
+La posición final de cada canica se calcula sumando las decisiones de cada nivel, y el resultado se almacena en un array.
+Salida: Un array con la posición final de cada canica, indicando en qué contenedor cayó.
+Función graficar_histograma:
 
-README - Programa para Identificar la Longitud de una Palabra y el Cuadrante de un Punto
-Descripción del Proyecto
-Este proyecto incluye dos programas sencillos que hemos desarrollado como parte del aprendizaje en Python durante el bootcamp.
-
-Programa 1: Longitud de una Palabra
-El primer programa toma una palabra ingresada por el usuario y evalúa su longitud. Según la cantidad de letras de la palabra, el programa da un mensaje indicando si es correcta (tiene entre 4 y 8 letras), si le faltan letras o si le sobran.
-
-Programa 2: Cuadrante de un Punto
-El segundo programa toma las coordenadas X e Y de un punto en el plano cartesiano, y determina en qué cuadrante se encuentra el punto. Además, el programa verifica si el punto está sobre los ejes o en el origen (0,0), y en esos casos da mensajes específicos.
-
-Programas
-Programa 1: Longitud de una Palabra
-Este programa se encarga de evaluar la longitud de una palabra dada por el usuario. El flujo del programa es simple:
-
-Se pide una palabra al usuario.
-Se obtiene la longitud de la palabra usando la función len().
-Se compara la longitud con el rango deseado (4-8 letras).
-Dependiendo de la longitud, se imprime uno de los siguientes mensajes:
-Palabra correcta si la longitud es entre 4 y 8 letras.
-Hacen falta letras si tiene menos de 4.
-Sobran letras si tiene más de 8.
-
-Programa 2: Cuadrante de un Punto
-Este programa utiliza las coordenadas X e Y para determinar en qué cuadrante se encuentra un punto en el plano cartesiano. El programa sigue estos pasos:
-
-Se ingresan las coordenadas X e Y.
-Se verifica si el punto está en el origen o sobre uno de los ejes.
-Si no está en el origen ni sobre los ejes, se determina en qué cuadrante está el punto:
-Cuadrante I: X > 0, Y > 0
-Cuadrante II: X < 0, Y > 0
-Cuadrante III: X < 0, Y < 0
-Cuadrante IV: X > 0, Y < 0
-
-Reflexiones del Bootcamp
-Hasta ahora, el bootcamp nos ha permitido aprender lo básico de la programación en Python, y estos dos ejercicios representan el tipo de problemas que podemos resolver con lo que hemos aprendido. Algunas reflexiones sobre nuestra experiencia:
-
-Pensamiento lógico: La programación nos ha enseñado a estructurar y organizar nuestras ideas. Crear programas implica pensar en los pasos a seguir para resolver un problema de manera lógica y secuencial.
+Propósito: Genera un histograma de los resultados obtenidos en la simulación.
+Parámetros:
+resultados: Array con la posición final de cada canica (generado por simular_galton).
+num_niveles: Número de niveles en la máquina de Galton.
+Proceso:
+Crea un histograma utilizando matplotlib, donde el eje X representa los contenedores y el eje Y la cantidad de canicas en cada contenedor.
+Incluye etiquetas en los ejes y un título descriptivo.
