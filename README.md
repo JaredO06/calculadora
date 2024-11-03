@@ -38,5 +38,6 @@ resultados: Array con la posición final de cada canica (generado por simular_ga
 num_niveles: Número de niveles en la máquina de Galton.
 
 Proceso
+
 Crea un histograma utilizando matplotlib, donde el eje X representa los contenedores y el eje Y la cantidad de canicas en cada contenedor.
 Incluye etiquetas en los ejes y un título descriptivo.
