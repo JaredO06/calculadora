@@ -1,4 +1,5 @@
 Simulación de una Máquina de Galton
+
 Este proyecto simula una máquina de Galton en Python, generando una distribución de las posiciones finales de canicas que caen a través de una serie de obstáculos. La simulación muestra cómo las canicas se acumulan en diferentes contenedores, siguiendo una distribución binomial que se aproxima a una campana de Gauss.
 
 Descripción del Proyecto
